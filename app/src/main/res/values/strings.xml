@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CalcApp</string>
+    <string name="buttonAdd">+</string>
+    <string name="buttonSubtract">-</string>
+    <string name="buttonMultiply">×</string>
+    <string name="buttonDivide">÷</string>
+</resources>
