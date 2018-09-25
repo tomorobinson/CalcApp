@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.support.design.widget.Snackbar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -63,8 +64,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if (value2 != 0) {
                         result = value1 / value2;
                     } else {
+                        warningMsg = "ZERO";
+                        Snackbar.make(v, "ZERO徐算は控えてください!", Snackbar.LENGTH_LONG).show();
+/*
                         warningMsg = "ZERO徐算は控えてください!";
                         showAlertDialog(warningMsg);
+*/
                     }
                     break;
                 default:
@@ -78,16 +83,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
         } else {
+            Snackbar.make(v, "数値を入力してください。", Snackbar.LENGTH_LONG).show();
             // AlertDialogで数値を入力する様注意
+/*
             warningMsg = "数値を入力してください!";
             showAlertDialog(warningMsg);
+*/
         }
     }
 
-    private void callIntent(float result) {
-
-    }
-
+/*
     private void showAlertDialog(String warningMsg) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle("注意");
@@ -103,4 +108,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
+*/
 }
